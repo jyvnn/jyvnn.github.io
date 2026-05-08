@@ -3,82 +3,189 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>E-Portfolio - Home</title>
+    <title>About Me - E-Portfolio</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <nav class="navbar">
         <div class="nav-container">
-            <div class="logo">📚 E-Portfolio</div>
+            <div class="logo">👨‍💻 Portfolio</div>
             <ul class="nav-menu">
-                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="index.html" class="active">About</a></li>
                 <li><a href="personal-info.html">Personal Info</a></li>
-                <li><a href="prerequisites.html">Prerequisites</a></li>
                 <li><a href="prelim.html">Prelim</a></li>
                 <li><a href="midterm.html">Midterm</a></li>
                 <li><a href="finals.html">Finals</a></li>
             </ul>
+            <a href="#contact" class="contact-btn">CONTACT</a>
         </div>
     </nav>
 
-    <header class="hero">
-        <div class="hero-content">
-            <h1>Welcome to My E-Portfolio</h1>
-            <p class="subtitle">Your Name Here</p>
-            <p class="description">A comprehensive showcase of my academic journey and growth</p>
-        </div>
-    </header>
+    <main class="container-fluid">
+        <section class="hero-section">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <p class="hero-label">WELCOME TO MY PORTFOLIO</p>
+                    <h1>I'm Your Name</h1>
+                    <p class="hero-subtitle">Computer Science Student | Web Developer | Tech Enthusiast</p>
+                    <p class="hero-description">
+                        I'm a passionate student dedicated to building creative digital solutions and continuously 
+                        learning new technologies. This portfolio showcases my academic journey, projects, and growth 
+                        throughout the semester.
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="#skills" class="btn btn-primary">Explore My Work</a>
+                        <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <div class="illustration-box">
+                        <div class="laptop-illustration">
+                            <svg viewBox="0 0 200 150" xmlns="http://www.w3.org/2000/svg">
+                                <rect x="20" y="30" width="160" height="100" fill="none" stroke="#00d4ff" stroke-width="2" rx="8"/>
+                                <rect x="30" y="40" width="140" height="80" fill="#1a1f3a" stroke="#00d4ff" stroke-width="1"/>
+                                <line x1="20" y1="130" x2="180" y2="130" stroke="#ff6b5b" stroke-width="4"/>
+                                <circle cx="100" cy="135" r="3" fill="#ff6b5b"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="profile-circle">
+                        <div class="profile-avatar">📸</div>
+                    </div>
+                </div>
+            </div>
 
-    <main class="container">
-        <section class="about">
-            <h2>What This E-Portfolio Contains</h2>
-            <div class="content-grid">
-                <div class="card">
-                    <div class="card-icon">👤</div>
-                    <h3>Personal Information</h3>
-                    <p>Get to know me better through my background, interests, and personal achievements.</p>
-                </div>
-                <div class="card">
-                    <div class="card-icon">📋</div>
-                    <h3>Prerequisites</h3>
-                    <p>Foundation courses and skills that prepared me for this semester's coursework.</p>
-                </div>
-                <div class="card">
-                    <div class="card-icon">📝</div>
-                    <h3>Preliminary Assessment</h3>
-                    <p>My initial performance and key learnings from the preliminary phase of the course.</p>
-                </div>
-                <div class="card">
-                    <div class="card-icon">📊</div>
-                    <h3>Midterm Evaluation</h3>
-                    <p>Progress assessment, projects completed, and improvements made at the semester's midpoint.</p>
-                </div>
-                <div class="card">
-                    <div class="card-icon">🏆</div>
-                    <h3>Finals Portfolio</h3>
-                    <p>Final projects, comprehensive assessments, and culminating achievements for the course.</p>
-                </div>
-                <div class="card">
-                    <div class="card-icon">🎯</div>
-                    <h3>Growth Journey</h3>
-                    <p>Track my learning progression and development throughout the entire semester.</p>
+            <div class="floating-elements">
+                <div class="float-icon icon-1">✨</div>
+                <div class="float-icon icon-2">💡</div>
+                <div class="float-icon icon-3">🚀</div>
+            </div>
+        </section>
+
+        <section id="skills" class="skills-section">
+            <div class="container">
+                <h2>What I Offer</h2>
+                <div class="skills-grid">
+                    <div class="skill-card">
+                        <div class="skill-icon">💻</div>
+                        <h3>Web Development</h3>
+                        <p>Building responsive, modern websites using HTML, CSS, and JavaScript.</p>
+                    </div>
+                    <div class="skill-card">
+                        <div class="skill-icon">🎨</div>
+                        <h3>UI/UX Design</h3>
+                        <p>Creating beautiful and intuitive user interfaces with modern design principles.</p>
+                    </div>
+                    <div class="skill-card">
+                        <div class="skill-icon">📚</div>
+                        <h3>Problem Solving</h3>
+                        <p>Analyzing complex problems and developing efficient solutions through critical thinking.</p>
+                    </div>
+                    <div class="skill-card">
+                        <div class="skill-icon">🤝</div>
+                        <h3>Collaboration</h3>
+                        <p>Working effectively in teams and communicating ideas clearly with others.</p>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <section class="cta-section">
-            <h2>Start Exploring</h2>
-            <p>Navigate through the sections above to learn more about my academic journey and achievements.</p>
-            <div class="cta-buttons">
-                <a href="personal-info.html" class="btn btn-primary">View My Profile</a>
-                <a href="finals.html" class="btn btn-secondary">See My Work</a>
+        <section class="about-section">
+            <div class="container">
+                <h2>About Me</h2>
+                <div class="about-content">
+                    <div class="about-text">
+                        <p>
+                            Hello! I'm a passionate student pursuing a degree in Information Technology. I have a strong 
+                            interest in web development and digital design, with a focus on creating intuitive and visually 
+                            appealing user experiences.
+                        </p>
+                        <p>
+                            Throughout my academic journey, I've developed expertise in modern web technologies and have 
+                            completed several projects that showcase my technical abilities. I'm committed to continuous 
+                            learning and staying updated with the latest industry trends.
+                        </p>
+                        <p>
+                            When I'm not coding, you can find me exploring new design trends, contributing to open-source 
+                            projects, or working on personal projects that challenge me to grow as a developer.
+                        </p>
+                    </div>
+                    <div class="about-highlights">
+                        <div class="highlight-item">
+                            <h4>Education</h4>
+                            <p>Bachelor of Science in Information Technology</p>
+                        </div>
+                        <div class="highlight-item">
+                            <h4>Passion</h4>
+                            <p>Web Development & Digital Innovation</p>
+                        </div>
+                        <div class="highlight-item">
+                            <h4>Skills</h4>
+                            <p>HTML, CSS, JavaScript, UI/UX Design, Git</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="portfolio-preview">
+            <div class="container">
+                <h2>My Portfolio Sections</h2>
+                <div class="preview-grid">
+                    <div class="preview-card">
+                        <div class="preview-icon">👤</div>
+                        <h3>Personal Information</h3>
+                        <p>Learn about my background, interests, and professional goals.</p>
+                        <a href="personal-info.html" class="preview-link">View →</a>
+                    </div>
+                    <div class="preview-card">
+                        <div class="preview-icon">📝</div>
+                        <h3>Preliminary</h3>
+                        <p>Initial phase work and foundational projects from the semester.</p>
+                        <a href="prelim.html" class="preview-link">View →</a>
+                    </div>
+                    <div class="preview-card">
+                        <div class="preview-icon">📊</div>
+                        <h3>Midterm</h3>
+                        <p>Mid-semester progress, growth, and advanced project work.</p>
+                        <a href="midterm.html" class="preview-link">View →</a>
+                    </div>
+                    <div class="preview-card">
+                        <div class="preview-icon">🏆</div>
+                        <h3>Finals</h3>
+                        <p>Final projects, comprehensive evaluation, and overall semester reflection.</p>
+                        <a href="finals.html" class="preview-link">View →</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact-section">
+            <div class="container">
+                <h2>Let's Connect</h2>
+                <p>I'm always interested in hearing about new opportunities and interesting projects.</p>
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <h4>📧 Email</h4>
+                        <p>your.email@university.edu</p>
+                    </div>
+                    <div class="contact-item">
+                        <h4>📱 Phone</h4>
+                        <p>+1 (XXX) XXX-XXXX</p>
+                    </div>
+                    <div class="contact-item">
+                        <h4>🌐 Location</h4>
+                        <p>City, Country</p>
+                    </div>
+                </div>
+                <a href="mailto:your.email@university.edu" class="btn btn-primary">Send Me an Email</a>
             </div>
         </section>
     </main>
 
     <footer class="footer">
         <p>&copy; 2025 My E-Portfolio. All rights reserved.</p>
-        <p>Created with ❤️ for ITCC302</p>
+        <p>Created for ITCC302</p>
     </footer>
 
     <script src="script.js"></script>
