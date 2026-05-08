@@ -1,0 +1,883 @@
+/* ============================================
+   E-Portfolio Stylesheet
+   Modern, Professional, Responsive Design
+   ============================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Root Variables */
+:root {
+    --primary-color: #2c3e50;
+    --secondary-color: #3498db;
+    --accent-color: #e74c3c;
+    --light-bg: #ecf0f1;
+    --dark-text: #2c3e50;
+    --light-text: #ffffff;
+    --success-color: #27ae60;
+    --warning-color: #f39c12;
+    --border-radius: 8px;
+    --transition: 0.3s ease;
+    --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* ============================================
+   Global Styles
+   ============================================ */
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--dark-text);
+    background-color: #f8f9fa;
+}
+
+/* ============================================
+   Navigation Bar
+   ============================================ */
+
+.navbar {
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: var(--box-shadow);
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: var(--light-text);
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-menu a {
+    color: var(--light-text);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color var(--transition);
+    border-bottom: 2px solid transparent;
+    padding-bottom: 0.5rem;
+}
+
+.nav-menu a:hover,
+.nav-menu a.active {
+    color: #f1c40f;
+    border-bottom-color: #f1c40f;
+}
+
+/* ============================================
+   Hero Section
+   ============================================ */
+
+.hero {
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    color: var(--light-text);
+    padding: 6rem 2rem;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    margin-bottom: 0.5rem;
+    animation: slideInDown 0.8s ease;
+}
+
+.hero-content .subtitle {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #f1c40f;
+    animation: slideInUp 0.8s ease;
+}
+
+.hero-content .description {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto;
+    opacity: 0.95;
+}
+
+/* ============================================
+   Page Header
+   ============================================ */
+
+.page-header {
+    background: linear-gradient(135deg, var(--secondary-color) 0%, #2980b9 100%);
+    color: var(--light-text);
+    padding: 4rem 2rem;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.page-header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.page-header p {
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+/* ============================================
+   Main Container
+   ============================================ */
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+/* ============================================
+   Content Section
+   ============================================ */
+
+.content-section {
+    background: white;
+    border-radius: var(--border-radius);
+    padding: 3rem;
+    margin-bottom: 3rem;
+    box-shadow: var(--box-shadow);
+}
+
+.content-section h2 {
+    color: var(--primary-color);
+    font-size: 2rem;
+    margin: 2rem 0 1rem 0;
+    border-bottom: 3px solid var(--secondary-color);
+    padding-bottom: 0.5rem;
+}
+
+.content-section h3 {
+    color: var(--secondary-color);
+    font-size: 1.5rem;
+    margin: 1.5rem 0 0.8rem 0;
+}
+
+.content-section p {
+    margin-bottom: 1rem;
+    line-height: 1.8;
+    color: #555;
+}
+
+/* ============================================
+   Lists
+   ============================================ */
+
+.list-items {
+    list-style: none;
+    margin: 1.5rem 0;
+}
+
+.list-items li {
+    padding: 0.7rem 0 0.7rem 2rem;
+    position: relative;
+    color: #555;
+}
+
+.list-items li:before {
+    content: "▸";
+    position: absolute;
+    left: 0;
+    color: var(--secondary-color);
+    font-weight: bold;
+}
+
+/* ============================================
+   Cards Grid
+   ============================================ */
+
+.content-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.card {
+    background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+    border-radius: var(--border-radius);
+    padding: 2rem;
+    text-align: center;
+    box-shadow: var(--box-shadow);
+    transition: transform var(--transition), box-shadow var(--transition);
+    border: 2px solid #ecf0f1;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    border-color: var(--secondary-color);
+}
+
+.card-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.card h3 {
+    color: var(--primary-color);
+    margin-bottom: 0.8rem;
+}
+
+.card p {
+    color: #666;
+    font-size: 0.95rem;
+}
+
+/* ============================================
+   Profile Card
+   ============================================ */
+
+.profile-card {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 2rem;
+    padding: 2rem;
+    background: linear-gradient(135deg, var(--secondary-color) 0%, #2980b9 100%);
+    border-radius: var(--border-radius);
+    color: white;
+}
+
+.profile-image {
+    flex-shrink: 0;
+}
+
+.avatar {
+    width: 150px;
+    height: 150px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 4rem;
+    border: 3px solid white;
+}
+
+.profile-info h2 {
+    color: white;
+    border: none;
+    margin-bottom: 0.5rem;
+}
+
+.profile-info .role {
+    color: #f1c40f;
+    font-size: 1.1rem;
+}
+
+/* ============================================
+   Skills Grid
+   ============================================ */
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.skill-item {
+    background: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: var(--border-radius);
+    border-left: 4px solid var(--secondary-color);
+}
+
+.skill-item h4 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.skill-item ul {
+    list-style: none;
+}
+
+.skill-item li {
+    padding: 0.5rem 0;
+    color: #555;
+}
+
+.skill-item li:before {
+    content: "✓ ";
+    color: var(--success-color);
+    font-weight: bold;
+    margin-right: 0.5rem;
+}
+
+/* ============================================
+   Prerequisites List
+   ============================================ */
+
+.prerequisites-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin: 2rem 0;
+}
+
+.prerequisite-item {
+    background: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: var(--border-radius);
+    border-top: 4px solid var(--secondary-color);
+    box-shadow: var(--box-shadow);
+}
+
+.prerequisite-item h3 {
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.prerequisite-item p {
+    color: #666;
+    font-size: 0.95rem;
+}
+
+/* ============================================
+   Task/Project Lists
+   ============================================ */
+
+.task-list,
+.project-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin: 2rem 0;
+}
+
+.task-item,
+.project-card {
+    background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+    padding: 1.5rem;
+    border-radius: var(--border-radius);
+    border-left: 5px solid var(--secondary-color);
+    box-shadow: var(--box-shadow);
+}
+
+.task-item h3,
+.project-card h3 {
+    color: var(--primary-color);
+    margin-bottom: 0.7rem;
+}
+
+.task-item p,
+.project-card p {
+    color: #666;
+    margin-bottom: 0.5rem;
+}
+
+/* ============================================
+   Progress Bars
+   ============================================ */
+
+.progress-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.progress-item {
+    background: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: var(--border-radius);
+}
+
+.progress-item h4 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.progress-bar {
+    background: #e0e0e0;
+    height: 10px;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-bottom: 0.5rem;
+}
+
+.progress-fill {
+    background: linear-gradient(90deg, var(--secondary-color), #27ae60);
+    height: 100%;
+    border-radius: 5px;
+    transition: width 1s ease;
+}
+
+.progress-item p {
+    text-align: right;
+    color: var(--secondary-color);
+    font-weight: bold;
+}
+
+/* ============================================
+   Tables
+   ============================================ */
+
+.assessment-table,
+.final-assessment-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 2rem 0;
+    box-shadow: var(--box-shadow);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+}
+
+.assessment-table th,
+.final-assessment-table th {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    padding: 1rem;
+    text-align: left;
+    font-weight: 600;
+}
+
+.assessment-table td,
+.final-assessment-table td {
+    padding: 1rem;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.assessment-table tr:nth-child(even),
+.final-assessment-table tr:nth-child(even) {
+    background: #f8f9fa;
+}
+
+.assessment-table tr:hover,
+.final-assessment-table tr:hover {
+    background: #ecf0f1;
+}
+
+/* ============================================
+   CTA Section
+   ============================================ */
+
+.cta-section {
+    background: linear-gradient(135deg, var(--secondary-color) 0%, #2980b9 100%);
+    color: white;
+    padding: 3rem 2rem;
+    border-radius: var(--border-radius);
+    text-align: center;
+    margin: 3rem 0;
+}
+
+.cta-section h2 {
+    color: white;
+    border: none;
+}
+
+.cta-section p {
+    color: rgba(255, 255, 255, 0.95);
+    margin-bottom: 2rem;
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.btn {
+    padding: 0.8rem 2rem;
+    border-radius: var(--border-radius);
+    text-decoration: none;
+    font-weight: 600;
+    transition: all var(--transition);
+    border: 2px solid transparent;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.btn-primary {
+    background: white;
+    color: var(--secondary-color);
+}
+
+.btn-primary:hover {
+    background: #f1c40f;
+    color: var(--primary-color);
+}
+
+.btn-secondary {
+    background: transparent;
+    color: white;
+    border: 2px solid white;
+}
+
+.btn-secondary:hover {
+    background: white;
+    color: var(--secondary-color);
+}
+
+/* ============================================
+   Skill Categories
+   ============================================ */
+
+.skills-matrix {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.skill-category {
+    background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    border: 2px solid var(--secondary-color);
+}
+
+.skill-category h3 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    border-bottom: 2px solid var(--secondary-color);
+    padding-bottom: 0.5rem;
+}
+
+.skill-category ul {
+    list-style: none;
+}
+
+.skill-category li {
+    padding: 0.5rem 0;
+    color: #555;
+}
+
+.skill-category li:before {
+    content: "✓ ";
+    color: var(--success-color);
+    font-weight: bold;
+    margin-right: 0.5rem;
+}
+
+/* ============================================
+   Outcome Cards
+   ============================================ */
+
+.outcomes,
+.learning-outcomes {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.outcome-card,
+.outcome {
+    background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    border-top: 4px solid var(--secondary-color);
+}
+
+.outcome-card h3,
+.outcome h3 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.outcome-card ul,
+.outcome ul {
+    list-style: none;
+}
+
+.outcome-card li,
+.outcome li {
+    padding: 0.5rem 0;
+    color: #555;
+}
+
+.outcome-card li:before,
+.outcome li:before {
+    content: "→ ";
+    color: var(--secondary-color);
+    margin-right: 0.5rem;
+}
+
+/* ============================================
+   Growth Areas
+   ============================================ */
+
+.growth-areas {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin: 2rem 0;
+}
+
+.growth-item {
+    background: #fff3cd;
+    padding: 1.5rem;
+    border-radius: var(--border-radius);
+    border-left: 4px solid var(--warning-color);
+}
+
+.growth-item h4 {
+    color: #856404;
+    margin-bottom: 0.5rem;
+}
+
+.growth-item p {
+    color: #856404;
+}
+
+/* ============================================
+   Journey
+   ============================================ */
+
+.journey {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 2rem 0;
+    gap: 1rem;
+}
+
+.journey-stage {
+    background: linear-gradient(135deg, var(--secondary-color) 0%, #2980b9 100%);
+    color: white;
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    text-align: center;
+    min-width: 200px;
+    box-shadow: var(--box-shadow);
+}
+
+.journey-stage h4 {
+    margin-bottom: 0.8rem;
+    color: #f1c40f;
+}
+
+.journey-stage p {
+    color: rgba(255, 255, 255, 0.95);
+}
+
+.journey-arrow {
+    font-size: 2rem;
+    color: var(--secondary-color);
+}
+
+/* ============================================
+   Skills Showcase
+   ============================================ */
+
+.skills-showcase {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    margin: 2rem 0;
+}
+
+.skill-box {
+    background: linear-gradient(135deg, var(--secondary-color) 0%, #2980b9 100%);
+    color: white;
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    text-align: center;
+    box-shadow: var(--box-shadow);
+    transition: transform var(--transition);
+}
+
+.skill-box:hover {
+    transform: scale(1.05);
+}
+
+.skill-box h4 {
+    margin-bottom: 0.8rem;
+    color: #f1c40f;
+}
+
+.skill-box p {
+    color: rgba(255, 255, 255, 0.95);
+    font-size: 0.9rem;
+}
+
+/* ============================================
+   Thank You Section
+   ============================================ */
+
+.thank-you {
+    background: linear-gradient(135deg, #27ae60 0%, #229954 100%);
+    color: white;
+    padding: 3rem 2rem;
+    border-radius: var(--border-radius);
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.thank-you h3 {
+    color: #f1c40f;
+    border: none;
+}
+
+.thank-you p {
+    color: rgba(255, 255, 255, 0.95);
+    font-size: 1.1rem;
+}
+
+/* ============================================
+   Footer
+   ============================================ */
+
+.footer {
+    background: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 2rem;
+    margin-top: 3rem;
+}
+
+.footer p {
+    margin: 0.5rem 0;
+    opacity: 0.9;
+}
+
+/* ============================================
+   Animations
+   ============================================ */
+
+@keyframes slideInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ============================================
+   Responsive Design
+   ============================================ */
+
+@media (max-width: 768px) {
+    .nav-menu {
+        flex-wrap: wrap;
+        gap: 1rem;
+        font-size: 0.9rem;
+    }
+
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+
+    .hero-content .subtitle {
+        font-size: 1.5rem;
+    }
+
+    .page-header h1 {
+        font-size: 1.8rem;
+    }
+
+    .content-section {
+        padding: 1.5rem;
+    }
+
+    .profile-card {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .avatar {
+        width: 100px;
+        height: 100px;
+        font-size: 3rem;
+    }
+
+    .cta-buttons {
+        flex-direction: column;
+    }
+
+    .btn {
+        width: 100%;
+    }
+
+    .journey {
+        flex-direction: column;
+    }
+
+    .journey-arrow {
+        transform: rotate(90deg);
+    }
+}
+
+@media (max-width: 480px) {
+    .nav-container {
+        padding: 0 1rem;
+    }
+
+    .nav-menu {
+        gap: 0.5rem;
+    }
+
+    .nav-menu a {
+        font-size: 0.85rem;
+    }
+
+    .logo {
+        font-size: 1.2rem;
+    }
+
+    .hero {
+        padding: 3rem 1rem;
+    }
+
+    .hero-content h1 {
+        font-size: 1.5rem;
+    }
+
+    .container {
+        padding: 0 1rem;
+    }
+
+    .content-section {
+        padding: 1rem;
+    }
+
+    .content-section h2 {
+        font-size: 1.5rem;
+    }
+}
