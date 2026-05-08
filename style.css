@@ -223,26 +223,26 @@ body {
 }
 
 .btn-primary {
-    background: var(--primary-dark);
+    background: linear-gradient(135deg, var(--accent-orange), var(--accent-yellow));
     color: white;
-    border: 2px solid var(--primary-dark);
+    border: 2px solid var(--accent-orange);
 }
 
 .btn-primary:hover {
     background: transparent;
-    color: var(--primary-dark);
+    color: var(--accent-orange);
     transform: translateY(-3px);
-    box-shadow: 0 10px 20px rgba(38, 40, 66, 0.35);
+    box-shadow: 0 10px 20px rgba(157, 182, 245, 0.35);
 }
 
 .btn-secondary {
     background: transparent;
-    color: var(--primary-dark);
-    border: 2px solid var(--primary-dark);
+    color: var(--accent-orange);
+    border: 2px solid var(--accent-orange);
 }
 
 .btn-secondary:hover {
-    background: var(--primary-dark);
+    background: var(--accent-orange);
     color: white;
     transform: translateY(-3px);
 }
@@ -304,9 +304,6 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 50%;
-    object-fit: cover;
-    font-size: 5rem;
 }
 
 /* Floating Elements */
@@ -375,13 +372,11 @@ body {
 .page-header h1 {
     font-size: 2.5rem;
     margin-bottom: 0.5rem;
-    color: var(--primary-dark);
 }
 
 .page-header p {
     font-size: 1.1rem;
     opacity: 0.9;
-    color: var(--primary-dark);
 }
 
 /* ============================================
@@ -743,10 +738,10 @@ body {
    ============================================ */
 
 .contact-section {
-    padding: 3rem 2rem 4rem;
+    padding: 4rem 2rem;
     text-align: center;
-    max-width: 800px;
-    margin: 0 auto 3rem;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .contact-section h2 {
