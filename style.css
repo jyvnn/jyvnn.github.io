@@ -13,6 +13,7 @@
 /* Root Variables */
 :root {
     --primary-dark: #262842;
+    --navy-blue: #0b1f4d;
     --secondary-dark: #293961;
     --accent-orange: #9db6f5;
     --accent-purple: #8897bd;
@@ -115,7 +116,7 @@ body {
 
 .contact-btn {
     background: linear-gradient(135deg, var(--accent-orange), var(--accent-yellow));
-    color: white;
+    color: var(--navy-blue);
     padding: 0.7rem 1.8rem;
     border-radius: 6px;
     text-decoration: none;
@@ -128,7 +129,7 @@ body {
 
 .contact-btn:hover {
     background: transparent;
-    color: var(--accent-orange);
+    color: var(--navy-blue);
     transform: translateY(-2px);
 }
 
@@ -224,7 +225,7 @@ body {
 
 .btn-primary {
     background: linear-gradient(135deg, var(--accent-orange), var(--accent-yellow));
-    color: white;
+    color: var(--navy-blue);
     border: 2px solid var(--accent-orange);
 }
 
@@ -243,7 +244,7 @@ body {
 
 .btn-secondary:hover {
     background: var(--accent-orange);
-    color: white;
+    color: var(--navy-blue);
     transform: translateY(-3px);
 }
 
@@ -363,7 +364,7 @@ body {
 
 .page-header {
     background: linear-gradient(135deg, var(--accent-orange) 0%, var(--accent-purple) 100%);
-    color: var(--text-light);
+    color: var(--navy-blue);
     padding: 3rem 2rem;
     text-align: center;
     margin-bottom: 3rem;
@@ -372,11 +373,13 @@ body {
 .page-header h1 {
     font-size: 2.5rem;
     margin-bottom: 0.5rem;
+    color: var(--navy-blue);
 }
 
 .page-header p {
     font-size: 1.1rem;
-    opacity: 0.9;
+    opacity: 0.95;
+    color: var(--navy-blue);
 }
 
 /* ============================================
@@ -734,38 +737,108 @@ body {
 }
 
 /* ============================================
+   Profile Photo
+   ============================================ */
+
+.profile-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.profile-initials {
+    width: 100%;
+    height: 100%;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    color: var(--navy-blue);
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.profile-avatar .profile-initials {
+    font-size: 2.8rem;
+}
+
+.avatar .profile-initials {
+    font-size: 2rem;
+}
+
+.profile-card {
+    display: flex;
+    align-items: center;
+    gap: 1.8rem;
+    background: rgba(157, 182, 245, 0.12);
+    border: 1px solid rgba(157, 182, 245, 0.26);
+    border-radius: var(--border-radius);
+    padding: 1.8rem;
+    margin-bottom: 2rem;
+}
+
+.profile-image {
+    flex: 0 0 130px;
+}
+
+.avatar {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background: linear-gradient(135deg, var(--accent-yellow), var(--accent-orange));
+    box-shadow: 0 10px 24px rgba(157, 182, 245, 0.25);
+    font-size: 2.4rem;
+}
+
+.profile-info h2 {
+    margin: 0 0 0.5rem 0;
+    color: var(--accent-cyan);
+}
+
+.profile-info .role {
+    margin: 0;
+    color: var(--text-gray);
+}
+
+/* ============================================
    Contact Section
    ============================================ */
 
 .contact-section {
     padding: 4rem 2rem;
     text-align: center;
-    max-width: 1200px;
+    max-width: 980px;
     margin: 0 auto;
 }
 
 .contact-section h2 {
     font-size: 2.5rem;
-    margin-bottom: 1rem;
+    margin-bottom: 1.4rem;
     color: var(--text-light);
 }
 
-.contact-section > p {
+.contact-section .container > p {
     color: var(--text-gray);
     font-size: 1.1rem;
-    margin-bottom: 3rem;
+    margin: 0 auto 2.8rem auto;
+    max-width: 650px;
 }
 
 .contact-info {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 2rem;
-    margin-bottom: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+    gap: 1.4rem;
+    max-width: 820px;
+    margin: 0 auto 2.2rem auto;
 }
 
 .contact-item {
     background: rgba(157, 182, 245, 0.12);
-    padding: 2rem;
+    padding: 1.35rem;
     border-radius: var(--border-radius);
     border: 1px solid rgba(157, 182, 245, 0.26);
 }
@@ -829,6 +902,11 @@ body {
         display: none;
     }
 
+    .profile-card {
+        flex-direction: column;
+        text-align: center;
+    }
+
     .profile-circle {
         width: 150px;
         height: 150px;
@@ -886,5 +964,170 @@ body {
     .portfolio-preview h2,
     .contact-section h2 {
         font-size: 1.8rem;
+    }
+}
+
+
+/* Term file download styling */
+.file-downloads {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.5rem;
+    margin: 1.5rem 0 2rem 0;
+}
+
+.file-group {
+    background: rgba(157, 182, 245, 0.12);
+    border: 1px solid rgba(157, 182, 245, 0.26);
+    border-radius: var(--border-radius);
+    padding: 1.5rem;
+}
+
+.file-group h3 {
+    color: var(--accent-cyan);
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+
+.file-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.file-list li {
+    margin-bottom: 0.8rem;
+    padding-left: 1.2rem;
+    position: relative;
+}
+
+.file-list li::before {
+    content: "▸";
+    position: absolute;
+    left: 0;
+    color: var(--accent-orange);
+    font-weight: bold;
+}
+
+.file-list a {
+    color: var(--text-light);
+    text-decoration: none;
+    line-height: 1.5;
+    word-break: break-word;
+}
+
+.file-list a:hover {
+    color: var(--accent-orange);
+    text-decoration: underline;
+}
+
+
+/* ============================================
+   Updated activity card styling
+   ============================================ */
+.activity-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+    gap: 1.3rem;
+    margin: 1.5rem 0 2rem 0;
+}
+
+.activity-card {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+    background: rgba(157, 182, 245, 0.12);
+    border: 1px solid rgba(157, 182, 245, 0.28);
+    border-radius: var(--border-radius);
+    padding: 1.35rem;
+    transition: transform var(--transition), border-color var(--transition), background var(--transition);
+}
+
+.activity-card:hover {
+    transform: translateY(-6px);
+    border-color: var(--accent-orange);
+    background: rgba(157, 182, 245, 0.18);
+}
+
+.activity-icon {
+    width: 44px;
+    height: 44px;
+    min-width: 44px;
+    border-radius: 12px;
+    background: linear-gradient(135deg, var(--accent-yellow), var(--accent-orange));
+    color: var(--navy-blue, #0b1f4d);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.4rem;
+    box-shadow: 0 8px 20px rgba(157, 182, 245, 0.2);
+}
+
+.activity-details h3 {
+    color: var(--accent-cyan);
+    margin: 0 0 0.45rem 0;
+    font-size: 1.05rem;
+    line-height: 1.4;
+}
+
+.activity-details p {
+    margin: 0 0 0.8rem 0;
+    color: var(--text-gray);
+    font-size: 0.92rem;
+    line-height: 1.5;
+}
+
+.file-action {
+    display: inline-block;
+    color: var(--navy-blue, #0b1f4d);
+    background: linear-gradient(135deg, var(--accent-orange), var(--accent-yellow));
+    border: 1px solid var(--accent-orange);
+    border-radius: 8px;
+    padding: 0.55rem 0.9rem;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 0.85rem;
+    transition: all var(--transition);
+}
+
+.file-action:hover {
+    background: transparent;
+    color: var(--accent-orange);
+}
+
+.google-drive-icon {
+    background: #ffffff;
+}
+
+.drive-shape {
+    width: 28px;
+    height: 24px;
+    display: block;
+    background: conic-gradient(from 120deg, #4285f4 0 33%, #34a853 0 66%, #fbbc04 0 83%, #ea4335 0 100%);
+    clip-path: polygon(50% 0%, 100% 86%, 72% 86%, 50% 48%, 28% 86%, 0% 86%);
+}
+
+@media (max-width: 480px) {
+    .activity-card {
+        flex-direction: column;
+    }
+}
+
+/* Fix long contact information text so the email stays inside the card */
+.contact-info {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    max-width: 900px;
+}
+
+.contact-item p,
+.contact-item a {
+    overflow-wrap: anywhere;
+    word-break: break-word;
+    line-height: 1.5;
+}
+
+@media (max-width: 480px) {
+    .contact-info {
+        grid-template-columns: 1fr;
     }
 }
