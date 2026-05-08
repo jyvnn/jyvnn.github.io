@@ -1,7 +1,8 @@
 /* ============================================
-   Modern Portfolio - Dark Theme
-   Color Scheme: Navy, Orange, Purple, Yellow
-   ============================================ */
+    Modern Portfolio - Cool Blue Theme
+    Palette: 262842, 293961, 2C497F, 8897BD, E3E4FA
+    Accent: Baby Blue + Pastel Pink
+    ============================================ */
 
 * {
     margin: 0;
@@ -11,14 +12,14 @@
 
 /* Root Variables */
 :root {
-    --primary-dark: #2c3e50;
-    --secondary-dark: #1a1f3a;
-    --accent-orange: #ff6b5b;
-    --accent-purple: #9b59b6;
-    --accent-yellow: #f1c40f;
-    --accent-cyan: #00d4ff;
-    --text-light: #ffffff;
-    --text-gray: #b0b0b0;
+    --primary-dark: #262842;
+    --secondary-dark: #293961;
+    --accent-orange: #9db6f5;
+    --accent-purple: #8897bd;
+    --accent-yellow: #f6cfe3;
+    --accent-cyan: #e3e4fa;
+    --text-light: #f7f8ff;
+    --text-gray: #c8d0ec;
     --border-radius: 12px;
     --transition: 0.3s ease;
     --box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
@@ -55,14 +56,14 @@ body {
    ============================================ */
 
 .navbar {
-    background: rgba(26, 31, 58, 0.95);
+    background: rgba(41, 57, 97, 0.95);
     backdrop-filter: blur(10px);
     padding: 1.2rem 0;
     position: sticky;
     top: 0;
     z-index: 1000;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-    border-bottom: 1px solid rgba(255, 107, 91, 0.1);
+    border-bottom: 1px solid rgba(157, 182, 245, 0.2);
 }
 
 .nav-container {
@@ -113,7 +114,7 @@ body {
 }
 
 .contact-btn {
-    background: linear-gradient(135deg, var(--accent-orange), #ff4444);
+    background: linear-gradient(135deg, var(--accent-orange), var(--accent-yellow));
     color: white;
     padding: 0.7rem 1.8rem;
     border-radius: 6px;
@@ -181,7 +182,7 @@ body {
     display: block;
     width: 100px;
     height: 4px;
-    background: linear-gradient(90deg, var(--accent-orange), var(--accent-purple), var(--accent-cyan));
+    background: linear-gradient(90deg, var(--accent-orange), var(--accent-purple), var(--accent-yellow));
     margin-top: 1rem;
     border-radius: 2px;
 }
@@ -222,7 +223,7 @@ body {
 }
 
 .btn-primary {
-    background: linear-gradient(135deg, var(--accent-orange), #ff4444);
+    background: linear-gradient(135deg, var(--accent-orange), var(--accent-yellow));
     color: white;
     border: 2px solid var(--accent-orange);
 }
@@ -231,7 +232,7 @@ body {
     background: transparent;
     color: var(--accent-orange);
     transform: translateY(-3px);
-    box-shadow: 0 10px 20px rgba(255, 107, 91, 0.3);
+    box-shadow: 0 10px 20px rgba(157, 182, 245, 0.35);
 }
 
 .btn-secondary {
@@ -265,7 +266,7 @@ body {
 .laptop-illustration {
     width: 100%;
     aspect-ratio: 4/3;
-    background: linear-gradient(135deg, rgba(155, 89, 182, 0.2), rgba(0, 212, 255, 0.2));
+    background: linear-gradient(135deg, rgba(136, 151, 189, 0.24), rgba(227, 228, 250, 0.2));
     border-radius: var(--border-radius);
     display: flex;
     align-items: center;
@@ -278,7 +279,7 @@ body {
 .laptop-illustration svg {
     width: 100%;
     height: 100%;
-    filter: drop-shadow(0 0 10px rgba(155, 89, 182, 0.5));
+    filter: drop-shadow(0 0 10px rgba(157, 182, 245, 0.45));
 }
 
 .profile-circle {
@@ -291,7 +292,7 @@ body {
     align-items: center;
     justify-content: center;
     font-size: 5rem;
-    box-shadow: 0 15px 35px rgba(241, 196, 15, 0.3);
+    box-shadow: 0 15px 35px rgba(246, 207, 227, 0.35);
     animation: float 4s ease-in-out infinite;
     bottom: -50px;
     right: -30px;
@@ -393,19 +394,19 @@ body {
    ============================================ */
 
 .content-section {
-    background: rgba(26, 31, 58, 0.6);
+    background: rgba(41, 57, 97, 0.62);
     backdrop-filter: blur(10px);
     border-radius: var(--border-radius);
     padding: 3rem;
     margin-bottom: 3rem;
-    border: 1px solid rgba(255, 107, 91, 0.1);
+    border: 1px solid rgba(157, 182, 245, 0.22);
 }
 
 .content-section h2 {
     color: var(--accent-orange);
     font-size: 2rem;
     margin: 2rem 0 1rem 0;
-    border-bottom: 2px solid rgba(155, 89, 182, 0.3);
+    border-bottom: 2px solid rgba(136, 151, 189, 0.35);
     padding-bottom: 0.8rem;
 }
 
@@ -455,7 +456,7 @@ body {
     margin: 2rem 0;
     border-radius: var(--border-radius);
     overflow: hidden;
-    background: rgba(26, 31, 58, 0.4);
+    background: rgba(41, 57, 97, 0.45);
 }
 
 .assessment-table th,
@@ -470,13 +471,13 @@ body {
 .assessment-table td,
 .final-assessment-table td {
     padding: 1rem;
-    border-bottom: 1px solid rgba(255, 107, 91, 0.1);
+    border-bottom: 1px solid rgba(157, 182, 245, 0.2);
     color: var(--text-gray);
 }
 
 .assessment-table tr:hover,
 .final-assessment-table tr:hover {
-    background: rgba(155, 89, 182, 0.1);
+    background: rgba(136, 151, 189, 0.18);
 }
 
 /* ============================================
@@ -484,12 +485,12 @@ body {
    ============================================ */
 
 .footer {
-    background: rgba(26, 31, 58, 0.95);
+    background: rgba(38, 40, 66, 0.95);
     color: var(--text-gray);
     text-align: center;
     padding: 2rem;
     margin-top: 3rem;
-    border-top: 1px solid rgba(255, 107, 91, 0.1);
+    border-top: 1px solid rgba(157, 182, 245, 0.2);
 }
 
 .footer p {
@@ -508,19 +509,19 @@ body {
 }
 
 .card {
-    background: rgba(155, 89, 182, 0.1);
+    background: rgba(136, 151, 189, 0.14);
     border-radius: var(--border-radius);
     padding: 2rem;
     text-align: center;
-    border: 2px solid rgba(155, 89, 182, 0.2);
+    border: 2px solid rgba(136, 151, 189, 0.28);
     transition: all var(--transition);
 }
 
 .card:hover {
     transform: translateY(-10px);
-    background: rgba(255, 107, 91, 0.1);
+    background: rgba(157, 182, 245, 0.16);
     border-color: var(--accent-orange);
-    box-shadow: 0 20px 40px rgba(255, 107, 91, 0.2);
+    box-shadow: 0 20px 40px rgba(157, 182, 245, 0.25);
 }
 
 .card-icon {
@@ -544,9 +545,9 @@ body {
 
 .skills-section {
     padding: 4rem 2rem;
-    background: rgba(255, 107, 91, 0.05);
-    border-top: 1px solid rgba(255, 107, 91, 0.1);
-    border-bottom: 1px solid rgba(155, 89, 182, 0.1);
+    background: rgba(157, 182, 245, 0.06);
+    border-top: 1px solid rgba(157, 182, 245, 0.16);
+    border-bottom: 1px solid rgba(136, 151, 189, 0.16);
 }
 
 .skills-section h2 {
@@ -565,21 +566,21 @@ body {
 }
 
 .skill-card {
-    background: rgba(26, 31, 58, 0.6);
+    background: rgba(41, 57, 97, 0.6);
     backdrop-filter: blur(10px);
     padding: 2.5rem 2rem;
     border-radius: var(--border-radius);
-    border: 1px solid rgba(255, 107, 91, 0.2);
+    border: 1px solid rgba(157, 182, 245, 0.24);
     text-align: center;
     transition: all var(--transition);
     cursor: pointer;
 }
 
 .skill-card:hover {
-    background: rgba(155, 89, 182, 0.1);
+    background: rgba(157, 182, 245, 0.12);
     border-color: var(--accent-purple);
     transform: translateY(-10px);
-    box-shadow: 0 20px 40px rgba(155, 89, 182, 0.2);
+    box-shadow: 0 20px 40px rgba(157, 182, 245, 0.2);
 }
 
 .skill-icon {
@@ -636,7 +637,7 @@ body {
 }
 
 .highlight-item {
-    background: rgba(255, 107, 91, 0.1);
+    background: rgba(157, 182, 245, 0.12);
     padding: 1.5rem;
     border-radius: var(--border-radius);
     border-left: 4px solid var(--accent-orange);
@@ -644,7 +645,7 @@ body {
 }
 
 .highlight-item:hover {
-    background: rgba(155, 89, 182, 0.1);
+    background: rgba(246, 207, 227, 0.14);
     border-left-color: var(--accent-purple);
 }
 
@@ -665,8 +666,8 @@ body {
 
 .portfolio-preview {
     padding: 4rem 2rem;
-    background: rgba(155, 89, 182, 0.05);
-    border-top: 1px solid rgba(155, 89, 182, 0.1);
+    background: rgba(136, 151, 189, 0.08);
+    border-top: 1px solid rgba(136, 151, 189, 0.2);
 }
 
 .portfolio-preview h2 {
@@ -685,20 +686,20 @@ body {
 }
 
 .preview-card {
-    background: rgba(26, 31, 58, 0.6);
+    background: rgba(41, 57, 97, 0.6);
     backdrop-filter: blur(10px);
     padding: 2rem;
     border-radius: var(--border-radius);
-    border: 1px solid rgba(155, 89, 182, 0.2);
+    border: 1px solid rgba(136, 151, 189, 0.25);
     text-align: center;
     transition: all var(--transition);
 }
 
 .preview-card:hover {
-    background: rgba(0, 212, 255, 0.1);
+    background: rgba(227, 228, 250, 0.18);
     border-color: var(--accent-cyan);
     transform: translateY(-10px);
-    box-shadow: 0 20px 40px rgba(0, 212, 255, 0.2);
+    box-shadow: 0 20px 40px rgba(227, 228, 250, 0.25);
 }
 
 .preview-icon {
@@ -763,10 +764,10 @@ body {
 }
 
 .contact-item {
-    background: rgba(255, 107, 91, 0.1);
+    background: rgba(157, 182, 245, 0.12);
     padding: 2rem;
     border-radius: var(--border-radius);
-    border: 1px solid rgba(255, 107, 91, 0.2);
+    border: 1px solid rgba(157, 182, 245, 0.26);
 }
 
 .contact-item h4 {
